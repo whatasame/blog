@@ -1,4 +1,4 @@
-# SW 비용 측정 - Function Point
+# 5) 수학적 SW 비용 산정 기법 - Function Point
 
 SW 비용 예측은 기간을 예측 할 수도, SW의 규모를 예측할 수도 있다.
 
@@ -15,7 +15,7 @@ FP 기법은 국내에서 주로 사용하며 국제 표준으로 지정되어�
 
 ### FP(Function Point)
 
-FP(기능 점수)는 소프트웨어 기능의 크기를 측정하는 단위로서 소프트웨어 기능의 복잡도를 상대적인 점수로 표현한 것을 말합니다. 입출력, DB 테이블, 인터페이스 등과 같은 소프트웨어 기능의 개수가 많을 수록 **라인 수에 상관 없이 규모도 크고 복잡도도 높다**고 판단하는 것이 가장 큰 특징입니다.
+FP(기능 점수)는 소프트웨어 기능의 크기를 측정하는 단위로서 소프트웨어 기능의 복잡도를 상대적인 점수로 표현한 것을 말합니다. 입출력, DB 테이블, 인터페이스 등과 같은 소프트웨어 **기능의 개수가 많을 수록 라인 수에 상관 없이 규모도 크고 복잡도도 높다**고 판단하는 것이 가장 큰 특징입니다.
 
 ### FP 기법의 특징
 
@@ -32,7 +32,7 @@ FP 기법에서는 소프트웨어의 기능에 초점을 맞추기 때문에 �
 
 FP 기법에선 FP를 측정하기 위해 소프트웨어의 기능을 분류하고 기능 종류에 따라 가중치를 부여하여 FP를 구합니다. 따라서 FP 기법에선 소프트웨어에 필요한 기능을 정의하고 정확하게 분류하는 것이 가장 중요합니다. 소프트웨어 기능을 분류하는 기준은 아래와 같습니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled.png"></p>
 
 - 데이터 기능 : DB를 관리하는 기능. → DB 테이블 그 자체
 - 트랜잭션 기능 : DB를 사용하는 기능 → SQL로 DB를 사용하는 것
@@ -58,7 +58,7 @@ FP 기법에선 FP를 측정하기 위해 소프트웨어의 기능을 분류하
 
 IFL와 EIF의 예는 아래와 같습니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 1.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 1.png"></p>
 
 위 그림의 경우에선 학생 등록금 정보를 다루는 데이터베이스가 이미 존재하였기에 등록금 정보는 외부 연계 파일로서 참조하고 학생 기본 정보 데이터베이스는 새로 만들어 내부 논리 파일로서 사용하는 것입니다.
 
@@ -92,7 +92,7 @@ DB 출력의 경우 DB에서 가져온 값을 가공하여 출력하면 EO, 가�
 
 ### 소프트웨어 기능 분류 예시
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 2.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 2.png"></p>
 
 데이터 기능의 경우 DB의 위치에 따라 구분됩니다. 회원 정보는 측정 대상 프로젝트의 DB에서 회원정보 테이블로 관리되므로 내부 논리 파일로 구분되었습니다. 우편번호 정보의 경우 외부 애플리케이션의 DB에서 API를 통해 프로젝트에 사용하므로 외부 연계 파일로 구분되었습니다.
 
@@ -115,7 +115,7 @@ DB 출력의 경우 DB에서 가져온 값을 가공하여 출력하면 EO, 가�
 
 FP 기법을 통해 프로젝트의 기능을 분류하고 기능별 가중치를 통해 FP를 구했습니다. 그러나 여기까지 구한 FP는 단순히 기능적인 요구 사항에 대해 계산한 결과이므로 여러 가지 특성을 고려하지 않았기 때문에 정확한 비용 예측이라 할 수 없습니다. 이러한 FP를 UFP(Unadjusted Function Point)라고 합니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 3.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 3.png"></p>
 
 따라서 COCOMO 기법과 동일하게 보다 현실적인 비용 산정을 위해 각종 보정 수치를 통해 UFP을 보정합니다. FP 기법에서 보정 결과는 2단계로 구분됩니다.
 
@@ -126,9 +126,9 @@ FP 기법을 통해 프로젝트의 기능을 분류하고 기능별 가중치�
 
 보정 전 개발 원가는 UFP와 FP당 개발 단가를 곱한 값입니다. FP당 개발 단가는 한국소프트웨어산업협회와 같은 기관에서 일정 주기마다 발표합니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 4.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 4.png"></p>
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 5.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 5.png"></p>
 
 예를 들어, UFP가 41.9일 경우 2021년 기준 단가는 553,114원이므로 보정 전 개발 원가는 23,175,476(41.9 $\times$ 553114)원이 됩니다.
 
@@ -136,7 +136,7 @@ FP 기법을 통해 프로젝트의 기능을 분류하고 기능별 가중치�
 
 보정 후 개발 원가는 보정 전 개발 원가에 비기능적 특성 값을 보정해준 값으로 **소프트웨어 최종 비용**에 해당합니다. 보정 후 개발 원가의 보정 수치는 아래와 같습니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 6.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 6.png"></p>
 
 - 규모 보정 계수
 - 애플리케이션 유형 보정 계수
@@ -152,7 +152,7 @@ FP 기법을 통해 프로젝트의 기능을 분류하고 기능별 가중치�
 
 FP의 크기에 따른 보정 계수입니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 7.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 7.png"></p>
 
 **연계 복잡성 수준**
 
@@ -160,7 +160,7 @@ FP의 크기에 따른 보정 계수입니다.
 
 연계 기관수가 많을수록 높은 값을 가집니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 8.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 8.png"></p>
 
 **성능 요구 수준**
 
@@ -168,7 +168,7 @@ FP의 크기에 따른 보정 계수입니다.
 
 성능 요구 수준이 복잡할 수록 높은 값을 가집니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 9.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 9.png"></p>
 
 **운영 환경 호환성**
 
@@ -176,7 +176,7 @@ FP의 크기에 따른 보정 계수입니다.
 
 하나 이상의 운영환경에 대한 요구사항, 서버 이중화 요구, 하드웨어와 소프트웨어 환경의 유사도 등요구 정도가 복잡할수록 높은 값을 가집니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 10.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 10.png"></p>
 
 **보안성 수준**
 
@@ -184,17 +184,17 @@ FP의 크기에 따른 보정 계수입니다.
 
 시큐어코딩, 웹 취약점 점검, 암호화 점검, 개인정보보호 등 보안성에 대한 요구 수준이 복잡할수록 높은 값을 가집니다. 나열한 4가지 외 보안 요구 사항을 포함하여 **총 요구 사항의 개수로 복잡도 수준을 측정**합니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 11.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 11.png"></p>
 
 ### FP 기법을 활용한 개발 비용 계산 예시
 
 **기능 요구 사항**
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 12.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 12.png"></p>
 
 **개발 비용 계산**
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 13.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 13.png"></p>
 
 위 그림의 EIF에서 알 수 있듯이 교수 정보 테이블과 학생 정보 테이블은 외부 애플리케이션에서 API로 참조한다고 가정한 예시입니다.
 
@@ -214,14 +214,14 @@ FP의 크기에 따른 보정 계수입니다.
     
     개발 업체에서 프로젝트에 사용되는 직접적인 경비를 말합니다. 눈에 보이는 재료를 사용하는 엔지니어링 사업(건축, 건설 등) 대가 기준에서 정한 직접 경비 외에 눈에 보이지 않는 소프트웨어 사업 특성을 반영하여 12개의 항목이 추가로 해당될 수 있습니다.
     
-    <p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 14.png"></p>
+    <p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 14.png"></p>
     
 
 ### 개발 비용_최종_진짜최종_제발마지막
 
 FP 기법에서 최종 소프트웨어 개발 비용을 측정하는 방법을 정리하면 아래와 같습니다.
 
-<p align="center"><img src="../../images/소프트웨어공학/SW 비용 측정 - Function Point-Untitled 15.png"></p>
+<p align="center"><img src="../../images/소프트웨어공학/5) 수학적 SW 비용 산정 기법 - Function Point-Untitled 15.png"></p>
 
 ## FP 기법의 장단점
 

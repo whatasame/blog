@@ -124,13 +124,13 @@ LCD I2C는 SDA, SCL 2개의 데이터 Bus로 LCD를 제어할 수 있으므로 2
 
 LCD I2C을 사용하기 위해 Arduino에서 LiquidCrystal_I2C 라이브러리가 필요하다. LiquidCrystal_I2C 에 정의된 주요 함수들은 다음과 같다.
 
-- LiquidCrystal_I2C lcd(I2C addr, # of horizontal char, # of vertical char)
+- LiquidCrystal_I2C lcd(I2C addr, horizontal char, of vertical char)
     
     LCD I2C 객체를 생성한다.
     
     - I2C addr : LCD I2C module의 메모리 주소. 메모리 주소는 LCD I2C 모듈마다 다르다.
-    - # of horizontal char : LCD의 가로 칸 수
-    - # of vertical char : LCD의 세로 칸 수
+    - horizontal char : LCD의 가로 칸 수
+    - vertical char : LCD의 세로 칸 수
 - lcd.init()
     
     LCD를 초기화한다.

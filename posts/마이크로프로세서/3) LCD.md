@@ -5,6 +5,7 @@
 LCD는 Liquid Crystal Display로서 백라이트에서 Liquid crystal panel에 빛을 비추어 화면을 출력하는 디스플레이이다.
 
 <p align="center"><img src="../../images/마이크로프로세서/3) LCD-Untitled.png"></p>
+
 Arduino에서 사용되는 LCD module은 문자를 8bit(1byte)로 구분한다. 이는 ASCII 코드의 단위와 같은데 특이하게도 ASCII 코드를 따르지 않고 자체 규칙을 사용한다. 신기하게도 일본어를 지원한다.
 
 Arduino LCD에서 ‘V’는 Upper 4bits 0101, Lower 4bits 0100인 01010100로 변환된다.
@@ -14,6 +15,7 @@ Arduino LCD에서 ‘V’는 Upper 4bits 0101, Lower 4bits 0100인 01010100로 �
 Arduino에서 처리되는 정보를 Serial 통신을 통해 PC로 출력할 수 있다. 이와 비슷하게 PC와 연결하지 않고 Arduino 단독으로 사용할 때 Arduino의 정보를 출력하기 위해 LCD를 사용한다. 예를 들어, Arduino로 RC 카를 만들 때 RC 카의 속도를 LCD로 출력할 수 있다.
 
 <p align="center"><img src="../../images/마이크로프로세서/3) LCD-Untitled 1.png"></p>
+
 LCD module의 핀 기능은 아래와 같다. 이는 LCD module 종류에 따라 다를 수 있다.
 
 - G : GND 연결 핀
@@ -28,6 +30,7 @@ LCD module의 핀 기능은 아래와 같다. 이는 LCD module 종류에 따라
 ### 가변 저항
 
 <p align="center"><img src="../../images/마이크로프로세서/3) LCD-Untitled 2.png"></p>
+
 LCD module에 가변 저항(potentiometer)를 연결함으로써 LCD의 밝기를 조절할 수 있다.
 
 가변 저항의 값을 높이면 LCD의 밝기가 어두워지고, 낮추면 LCD의 밝기가 밝아진다.
@@ -105,6 +108,7 @@ I2C는 Inter Integrated Circuit의 약자로서 Serial 통신과 같이 통신 �
 I two C가 아닌 I square C라고 발음한다. TWI(Two-Wired Interface)라고 부르기도 한다.
 
 <p align="center"><img src="../../images/마이크로프로세서/3) LCD-Untitled 3.png"></p>
+
 I2C에는 2개의 데이터 Bus가 있다.
 
 - SDA : Serial DAta

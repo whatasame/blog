@@ -30,12 +30,6 @@ A 회사에서 만든 Protocol이 국제 표준이 됐다고 하자. 그럼 A �
 
 위 그림은 앞서 말한 복잡한 과정을 단계별로 나누어 도식화 한 것이다. 이렇게 하나의 작업을 여러 단계(모듈)로 구분짓는 것을 Layering이라 하고 각 단계를 Layer라고 한다.
 
-네트워크에서 이루어지는 데이터 통신을 Layering하면 아래와 같다.
-
-<p align="center"><img src="../../images/데이터통신/2) Protocol, Layer-Untitled 1.png"></p>
-
-데이터 통신에 필요한 과정을 5개의 Layer로 분리했다. 이렇게 데이터 통신 과정을 5개의 Layer로 분리한 것을 **TCP/IP Protocol Model**이라 한다.
-
 ### Layering의 장단점
 
 👍 **장점**

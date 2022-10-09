@@ -74,7 +74,7 @@ Data를 Signal로 인코딩하는 방법은 정말 많다.
     
     실제로 오실레이터는 항상 같은 간격의 전기 신호를 보장할 수 없습니다. 따라서 전기 신호의 변화를 보고 장치가 시간차를 보정하는 과정이 존재합니다. 
     
-<p align="center"><img src="../../images/데이터통신/5) Line Coding-Untitled 3.png"></p>
+    <p align="center"><img src="../../images/데이터통신/5) Line Coding-Untitled 3.png"></p>
     
     그러나 인코딩 방식에 따라 시간차를 보정할 수 없는 경우가 있습니다. 예를 들어 11111의 신호를 보낼 때 B 인코딩은 구분할 수 있는 반면 A 인코딩은 시작과 끝을 알 수 없어 보정할 수 없습니다. 보정할 수 없다는 것은 Synchronization 할 수 없다는 것과 동일합니다.
     

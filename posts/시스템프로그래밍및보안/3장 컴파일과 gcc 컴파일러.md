@@ -1,11 +1,8 @@
 # 3장 컴파일과 gcc 컴파일러
 
+✅ [https://bradbury.tistory.com/226의](https://bradbury.tistory.com/226%EC%9D%98) 내용을 바탕으로 제가 공부한 내용을 추가하였습니다.
+
 ## 컴파일
-
-<aside>
-💡 [https://bradbury.tistory.com/226](https://bradbury.tistory.com/226)의 내용을 바탕으로 제가 공부한 내용을 추가하였습니다.
-
-</aside>
 
 컴파일은 인간이 이해할 수 있는 고급 언어로 작성된 소스 코드를 CPU가 이해할 수 있는 기계어로 변환하는 작업을 말합니다. 컴퓨터는 0과 1로 이루어진 기계어만 이해할 수 있기 때문에 우리가 작성한 소스코드를 실행시키기 위해 컴파일 과정이 반드시 필요합니다. 
 

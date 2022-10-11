@@ -1,6 +1,6 @@
 # 3장 컴파일과 gcc 컴파일러
 
-✅ [https://bradbury.tistory.com/226의](https://bradbury.tistory.com/226%EC%9D%98) 내용을 바탕으로 제가 공부한 내용을 추가하였습니다.
+✅ [https://bradbury.tistory.com/226](https://bradbury.tistory.com/226)의 내용을 바탕으로 제가 공부한 내용을 추가하였습니다.
 
 ## 컴파일
 

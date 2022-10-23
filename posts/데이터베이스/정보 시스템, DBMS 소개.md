@@ -11,6 +11,7 @@
 
 ### 정보 시스템이란?
 
+<p align="center"><img src="../../images/데이터베이스/정보 시스템, DBMS 소개-Untitled.png"></p>
 
 정보 시스템(Information System)
 
@@ -20,6 +21,7 @@
 
 ### 데이터 처리 시스템
 
+<p align="center"><img src="../../images/데이터베이스/정보 시스템, DBMS 소개-Untitled 1.png"></p>
 
 데이터 처리 시스템
 
@@ -39,6 +41,7 @@
 
 ### 파일 시스템으로 구현
 
+<p align="center"><img src="../../images/데이터베이스/정보 시스템, DBMS 소개-Untitled 2.png"></p>
 
 파일 시스템을 활용한 정보 시스템
 
@@ -71,6 +74,7 @@
 
 ### 데이터베이스란?
 
+<p align="center"><img src="../../images/데이터베이스/정보 시스템, DBMS 소개-Untitled 3.png"></p>
 
 데이터베이스
 
@@ -95,6 +99,7 @@
 
 ### 데이터베이스로 구현한 정보 시스템
 
+<p align="center"><img src="../../images/데이터베이스/정보 시스템, DBMS 소개-Untitled 4.png"></p>
 
 데이터베이스를 활용한 정보 시스템
 

@@ -182,7 +182,7 @@ Differential Manchester는 NRZ-I와 RZ를 합친 인코딩 방식입니다.
 
 ### AMI
 
-AMI는 Alternate Mark Inversion의 약자로서 0을 0V로 표현하고 1을 직전 전압의 반대로 표현합니다.
+AMI(Alternate Mark Inversion)는 0을 0V로 표현하고 1을 최근 1의 전압의 반대로 표현합니다.
 
 <p align="center"><img src="../../images/데이터통신/5) Line Coding-Untitled 10.png"></p>
 
@@ -197,7 +197,7 @@ AMI는 Alternate Mark Inversion의 약자로서 0을 0V로 표현하고 1을 직
 
 ### Pseudoternary
 
-Pseudoternary는 AMI의 반대로서 0을 직전 전압의 반대로 표현하고 1을 0V로 표현합니다.
+Pseudoternary는 AMI의 반대로서 0을 최근 0의 전압의 반대로 표현하고 1을 0V로 표현합니다.
 
 <p align="center"><img src="../../images/데이터통신/5) Line Coding-Untitled 11.png"></p>
 

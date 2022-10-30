@@ -28,7 +28,7 @@ public static void main(String[] args) {
 
 위 코드의 결과는 아래와 같습니다.
 
-<p align="center"><img src="../../images/JAVA/#001 toString()-Untitled.png"></p>
+<p align="center"><img src="../../images/JAVA/#001 toString()/Untitled.png"></p>
 
 그런데 위와 같은 코드를 매번 작성하는 것은 귀찮습니다. 별도의 함수를 만들어 사용해야 할까요?
 
@@ -43,7 +43,7 @@ public static void main(String[] args) {
 
 위 코드의 결과는 아래와 같습니다.
 
-<p align="center"><img src="../../images/JAVA/#001 toString()-Untitled 1.png"></p>
+<p align="center"><img src="../../images/JAVA/#001 toString()/Untitled%201.png"></p>
 
 알기 힘든 결과가 나옵니다. Student는 student의 클래스 명인 것 같은데 75b84c92는 뭘까요?
 
@@ -55,15 +55,15 @@ public static void main(String[] args) {
 
 `toString()` 는 객체를 문자열로 표현한 문자열을 리턴하는 메서드입니다. `toString()`는 Object 클래스에 선언되어있습니다. 
 
-<p align="center"><img src="../../images/JAVA/#001 toString()-Untitled 2.png"></p>
+<p align="center"><img src="../../images/JAVA/#001 toString()/Untitled%202.png"></p>
 
 Object 클래스는 최상위 클래스로서 모든 클래스는 Object 클래스의 상속을 받습니다. Student 클래스도 Object 클래스의 상속을 받는 것이죠. 그렇기 때문에 우리가 정의하지 않은 `toString()`을 사용할 수 있는 것입니다.
 
-<p align="center"><img src="../../images/JAVA/#001 toString()-Untitled 3.png"></p>
+<p align="center"><img src="../../images/JAVA/#001 toString()/Untitled%203.png"></p>
 
 그럼 앞서 봤던 `toString()`의 결과는 Object 클래스에서 정의한 값이 출력된 것임을 알 수 있습니다. Object 클래스의 `toString()` 는 아래와 같이 구현되어 있습니다.
 
-<p align="center"><img src="../../images/JAVA/#001 toString()-Untitled 4.png"></p>
+<p align="center"><img src="../../images/JAVA/#001 toString()/Untitled%204.png"></p>
 
 이제야 위 결과가 어떤 값인지 알 것 같습니다. 예상했던 대로 Student는 객체의 클래스 이름이었고, 75b84c92는 객체의 해쉬코드 값이었습니다. 
 
@@ -98,6 +98,6 @@ public static void main(String[] args) {
 
 위 코드의 실행 결과는 아래와 같습니다.
 
-<p align="center"><img src="../../images/JAVA/#001 toString()-Untitled 5.png"></p>
+<p align="center"><img src="../../images/JAVA/#001 toString()/Untitled%205.png"></p>
 
 우리가 원했던 것처럼 `System.out.println()`에 객체만 입력하여 객체의 정보를 출력하였습니다. 이제부턴 `toString()`을 수정하여 객체 정보를 출력할 수 있습니다.

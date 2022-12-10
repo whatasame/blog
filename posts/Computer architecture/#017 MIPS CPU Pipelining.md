@@ -53,7 +53,7 @@ MIPS CPU는 다른 ISA보다 파이프라인하기가 쉽습니다. 바로 MIPS�
 
 이처럼 이미 처리한 데이터를 나중에 다시 사용해야하는 문제를 파이프라인 Hazard라고 합니다.
 
-초록색 Hazard를 Data hazard, 보라색 Hazard를 Control hazard라고 합니다.
+아래의 보라색 Hazard를 Data hazard, 위의 보라색 Hazard를 Control hazard라고 합니다.
 
 이번 글에선 파이프라인 Hazard에 대해선 소개만 하고 다음 글에서 이야기하도록 하겠습니다.
 
@@ -95,6 +95,7 @@ MIPS CPU는 다른 ISA보다 파이프라인하기가 쉽습니다. 바로 MIPS�
 ### 장점
 
 - Clock cycle time이 짧아져 Clock rate가 높아진다
+- 파이프라인이 꽉 차게 되면 한 사이클마다 명령어가 처리되므로 CPI가 1이 된다
 - CPU 모듈이 서로 다른 Clock cycle에서 한 번 이상 사용된다
 
 ### 단점

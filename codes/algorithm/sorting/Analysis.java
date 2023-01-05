@@ -9,10 +9,11 @@ import java.util.List;
 
 public class Analysis {
 
+    public static String dataType;
+
     public static int[] getAscendingData(int count) {
-
         /* Return data sorted in ascending order */
-
+        dataType = "Ascending";
         int[] data = new int[count];
 
         for (int i = 0; i < count; i++) {
@@ -24,9 +25,8 @@ public class Analysis {
     }
 
     public static int[] getDescendingData(int count) {
-
         /* Return data sorted in descending order */
-
+        dataType = "Descending";
         int[] data = new int[count];
 
         for (int i = 0; i < count; i++) {
@@ -38,11 +38,9 @@ public class Analysis {
 
 
     public static int[] getRandomData(int count) {
-
         /* Return random data */
-
+        dataType = "Random";
         int[] data = new int[count];
-
 
         for (int i = 0; i < count; i++) {
             data[i] = (int) (Math.random() * count) + 1;
@@ -57,25 +55,33 @@ public class Analysis {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Input data count: ");
         int dataCount = Integer.parseInt(br.readLine());
-        System.out.println();
 
         // List of sorting algorithms
         List<Sort> sortList = new LinkedList<Sort>() {
             {
                 add(new InsertionSort());
                 add(new MergeSort());
+                add(new QuickSort());
             }
         };
 
-        // Run sorting each algorithm
-        for(Sort sort : sortList){
-            int[] data = getRandomData(dataCount);
+        // Make test case
+        int[] testCase = getRandomData(dataCount);
+        System.out.println("Data type: " + dataType);
+        System.out.println();
 
-            System.out.println("< " + sort.getClass().getSimpleName() + " >");
-            System.out.println("Original data: " + Arrays.toString(data));
+        // Run and measure performance each sorting algorithm
+        System.out.println("Execution time analysis");
+        for (Sort sort : sortList) {
+            int[] data = Arrays.copyOf(testCase, testCase.length);
+
+            long start = System.currentTimeMillis();
             sort.run(data);
-            System.out.println("Sorted data: " + Arrays.toString(data));
-            System.out.println();
+            long takenTime = System.currentTimeMillis() - start;
+            System.out.println("* " + sort.getClass().getSimpleName() + ": "+ takenTime + "ms"); // Print result
+//            System.out.println("Original data: " + Arrays.toString(testCase));
+//            System.out.println("Sorted data: " + Arrays.toString(data));
+//            System.out.println();
         }
 
     }

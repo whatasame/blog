@@ -2,7 +2,7 @@ package algorithm.sorting;
 
 import java.util.Arrays;
 
-public class MergeSort {
+public class MergeSort implements Sort{
 
     public void sort(int[] data, int left, int right)
     {
@@ -47,5 +47,10 @@ public class MergeSort {
             i++;
         }
 
+    }
+
+    @Override
+    public void run(int[] data) {
+        sort(data, 0, data.length - 1);
     }
 }

@@ -18,7 +18,6 @@ public class Analysis {
 
         for (int i = 0; i < count; i++) {
             data[i] = i + 1;
-            System.out.println(data[i]);
         }
 
         return data;

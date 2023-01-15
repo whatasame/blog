@@ -27,40 +27,40 @@ public class PeakFinder2D {
 
         /* Return peak index {row, col} */
 
-        int targetRow = 0, targetColumn = 0; // peak: (targetRow, targetColumn)
+        int row = 0, col = 0; // peak: (row, col)
         int leftColumn = 0, rightColumn = data.length - 1; // Range of subarray
 
         while (leftColumn < rightColumn) {
             // Calculate middle column index of array
-            targetColumn = leftColumn + (rightColumn - leftColumn) / 2;
+            col = leftColumn + (rightColumn - leftColumn) / 2;
 
             // Find index of maximum value in column
-            targetRow = getMaxValueRowIndex(data, targetColumn);
+            row = getMaxValueRowIndex(data, col);
 
             // Compare to adjacent columns
-            if (data[targetRow][targetColumn] < data[targetRow][targetColumn + 1]) {
-                leftColumn = targetColumn + 1;
+            if (data[row][col] < data[row][col + 1]) {
+                leftColumn = col + 1;
             } else {
-                rightColumn = targetColumn;
+                rightColumn = col;
             }
         }
 
-        return new int[]{targetRow, targetColumn};
+        return new int[]{row, col};
     }
 
     private static int getMaxValueRowIndex(int[][] data, int middleColumn) {
 
         // Index of max value in column
-        int index = 0;
+        int row = 0;
 
-        // Row count = data.length
+        // Find max value index
         for (int i = 1; i < data.length; i++) {
-            if (data[i][middleColumn] > data[index][middleColumn]) {
-                index = i;
+            if (data[i][middleColumn] > data[row][middleColumn]) {
+                row = i;
             }
         }
 
-        return index;
+        return row;
     }
 
 

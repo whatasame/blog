@@ -24,6 +24,19 @@ public class Fibonacci {
         return data[N];
     }
 
+    public static BigInteger recursive(int N) {
+        BigInteger num = new BigInteger(String.valueOf(N));
+
+        // Check end condition
+        int compare = num.compareTo(new BigInteger("2"));
+        if(compare < 0){ // num < 2
+            return num;
+        }
+
+        // Recursive
+        return recursive(N - 1).add(recursive(N - 2));
+    }
+
     public static void main(String[] args) throws IOException {
         // Read data count
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -34,6 +47,11 @@ public class Fibonacci {
         long start = System.currentTimeMillis();
         System.out.println(dp(N));
         System.out.println("DP: " + (System.currentTimeMillis() - start) + "ms");
+
+        // Run by recursive
+        start = System.currentTimeMillis();
+        System.out.println(recursive(N));
+        System.out.println("Recursive: " + (System.currentTimeMillis() - start) + "ms");
 
         br.close();
     }

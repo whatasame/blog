@@ -1,4 +1,4 @@
-package algorithm.string;
+package string;
 
 public class RabinKarp {
 

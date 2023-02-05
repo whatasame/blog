@@ -1,4 +1,4 @@
-package algorithm.dp;
+package dp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class Fibonacci {
 
         // Check end condition
         int compare = num.compareTo(new BigInteger("2"));
-        if(compare < 0){ // num < 2
+        if (compare < 0) { // num < 2
             return num;
         }
 

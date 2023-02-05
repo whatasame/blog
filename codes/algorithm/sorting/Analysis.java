@@ -1,4 +1,4 @@
-package algorithm.sorting;
+package sorting;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -77,7 +77,7 @@ public class Analysis {
             long start = System.currentTimeMillis();
             sort.run(data);
             long takenTime = System.currentTimeMillis() - start;
-            System.out.println("* " + sort.getClass().getSimpleName() + ": "+ takenTime + "ms"); // Print result
+            System.out.println("* " + sort.getClass().getSimpleName() + ": " + takenTime + "ms"); // Print result
 //            System.out.println("Original data: " + Arrays.toString(testCase));
 //            System.out.println("Sorted data: " + Arrays.toString(data));
 //            System.out.println();

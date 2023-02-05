@@ -1,11 +1,10 @@
-package algorithm.sorting;
+package sorting;
 
 import java.util.Arrays;
 
-public class MergeSort implements Sort{
+public class MergeSort implements Sort {
 
-    public void sort(int[] data, int left, int right)
-    {
+    public void sort(int[] data, int left, int right) {
         if (left < right) {
             int middle = left + ((right - left) / 2); // Half index of data
 

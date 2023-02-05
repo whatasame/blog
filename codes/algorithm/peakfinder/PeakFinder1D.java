@@ -1,4 +1,4 @@
-package algorithm.peakfinder;
+package peakfinder;
 
 import java.util.Arrays;
 
@@ -14,7 +14,7 @@ public class PeakFinder1D {
 
             if (data[target] < data[target + 1]) {
                 left = target + 1;
-            } else{
+            } else {
                 right = target;
             }
         }

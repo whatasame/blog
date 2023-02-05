@@ -1,4 +1,4 @@
-package algorithm.sorting;
+package sorting;
 
 public interface Sort {
 

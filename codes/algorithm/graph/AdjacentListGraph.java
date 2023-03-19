@@ -22,6 +22,22 @@ public class AdjacentListGraph {
         adjacentList.get(u).add(v);
     }
 
+    public void dfs(int v) {
+        boolean[] visited = new boolean[VERTEX_RANGE + 1];
+        dfs(visited, v);
+    }
+
+    private void dfs(boolean[] visited, int v) {
+        visited[v] = true;
+        System.out.print(v + " ");
+
+        for (int neighbor : adjacentList.get(v)) {
+            if (!visited[neighbor]) {
+                dfs(visited, neighbor);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         AdjacentListGraph graph = new AdjacentListGraph(5);
         graph.addEdge(1, 2);
@@ -29,5 +45,7 @@ public class AdjacentListGraph {
         graph.addEdge(1, 4);
         graph.addEdge(2, 4);
         graph.addEdge(3, 4);
+
+        graph.dfs(1);
     }
 }

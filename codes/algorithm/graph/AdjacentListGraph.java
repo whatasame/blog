@@ -1,9 +1,6 @@
 package graph;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class AdjacentListGraph {
 
@@ -26,6 +23,12 @@ public class AdjacentListGraph {
     public void addUndirectedEdge(int u, int v) {
         adjacentList.get(u).add(v);
         adjacentList.get(v).add(u);
+    }
+
+    private void sortList() {
+        for (List<Integer> neighbors : adjacentList) {
+            Collections.sort(neighbors);
+        }
     }
 
     public void dfs(int v) {
@@ -69,6 +72,7 @@ public class AdjacentListGraph {
     }
 
     public static void main(String[] args) {
+        /* Init graph */
         AdjacentListGraph graph = new AdjacentListGraph(5);
         graph.addUndirectedEdge(5, 4);
         graph.addUndirectedEdge(5, 2);
@@ -76,9 +80,13 @@ public class AdjacentListGraph {
         graph.addUndirectedEdge(3, 4);
         graph.addUndirectedEdge(3, 1);
 
+        graph.sortList(); // Visit neighbors in ascending order of vertex numbers
+
+        /* DFS */
         graph.dfs(3);
         System.out.println();
 
+        /* BFS */
         graph.bfs(3);
     }
 }

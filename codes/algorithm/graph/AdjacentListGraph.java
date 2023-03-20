@@ -71,14 +71,37 @@ public class AdjacentListGraph {
 
     }
 
+
+    public void findCycleOnDirectedGraph(int vertex) {
+        boolean[] visited = new boolean[VERTEX_RANGE + 1];
+        boolean[] finished = new boolean[VERTEX_RANGE + 1];
+
+        dfs(visited, finished, vertex);
+    }
+
+    private void dfs(boolean[] visited, boolean[] finished, int v) {
+        visited[v] = true;
+
+        for (int neighbor : adjacentList.get(v)) {
+            if (!visited[neighbor]) {
+                dfs(visited, finished, neighbor);
+            } else if (!finished[neighbor]) {
+                System.out.printf("Cycle exist from %d to %d\n", neighbor, neighbor);
+            }
+        }
+
+        finished[v] = true;
+    }
+
     public static void main(String[] args) {
         /* Init graph */
         AdjacentListGraph graph = new AdjacentListGraph(5);
-        graph.addUndirectedEdge(5, 4);
-        graph.addUndirectedEdge(5, 2);
-        graph.addUndirectedEdge(1, 2);
-        graph.addUndirectedEdge(3, 4);
-        graph.addUndirectedEdge(3, 1);
+        graph.addDirectedEdge(5, 4);
+        graph.addDirectedEdge(5, 2);
+        graph.addDirectedEdge(1, 2);
+        graph.addDirectedEdge(3, 4);
+        graph.addDirectedEdge(3, 1);
+        graph.addDirectedEdge(1, 3);
 
         graph.sortList(); // Visit neighbors in ascending order of vertex numbers
 
@@ -88,5 +111,9 @@ public class AdjacentListGraph {
 
         /* BFS */
         graph.bfs(3);
+        System.out.println();
+
+        /* Find cycle on directed graph */
+        graph.findCycleOnDirectedGraph(3);
     }
 }

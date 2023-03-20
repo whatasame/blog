@@ -2,13 +2,13 @@ package graph;
 
 import java.util.*;
 
-public class AdjacentListGraph {
+public class AdjacencyListGraph {
 
     private final int VERTEX_RANGE; // 1 to VERTEX_RANGE
     private final List<List<Integer>> adjacentList;
 
 
-    public AdjacentListGraph(int maxVertexNumber) {
+    public AdjacencyListGraph(int maxVertexNumber) {
         VERTEX_RANGE = maxVertexNumber;
         adjacentList = new LinkedList<>();
         for (int i = 0; i <= VERTEX_RANGE; i++) {
@@ -95,7 +95,7 @@ public class AdjacentListGraph {
 
     public static void main(String[] args) {
         /* Init graph */
-        AdjacentListGraph graph = new AdjacentListGraph(5);
+        AdjacencyListGraph graph = new AdjacencyListGraph(5);
         graph.addDirectedEdge(5, 4);
         graph.addDirectedEdge(5, 2);
         graph.addDirectedEdge(1, 2);

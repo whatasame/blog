@@ -1,4 +1,4 @@
-package graph;
+package algorithm.graph;
 
 import java.util.*;
 
@@ -10,9 +10,9 @@ public class AdjacencyListGraph {
 
     public AdjacencyListGraph(int maxVertexNumber) {
         VERTEX_RANGE = maxVertexNumber;
-        adjacentList = new LinkedList<>();
+        adjacentList = new ArrayList<>();
         for (int i = 0; i <= VERTEX_RANGE; i++) {
-            adjacentList.add(new ArrayList<>());
+            adjacentList.add(new LinkedList<>());
         }
     }
 

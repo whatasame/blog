@@ -1,4 +1,4 @@
-package ch16.sec03;
+package example.thisisjava.ch16.sec03;
 
 public class Person {
     public void action1(Workable workable) {

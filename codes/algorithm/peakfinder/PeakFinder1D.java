@@ -1,4 +1,4 @@
-package peakfinder;
+package algorithm.peakfinder;
 
 import java.util.Arrays;
 

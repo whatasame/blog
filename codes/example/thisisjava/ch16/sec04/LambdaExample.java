@@ -1,4 +1,4 @@
-package ch16.sec04;
+package example.thisisjava.ch16.sec04;
 
 public class LambdaExample {
     public static void main(String[] args) {

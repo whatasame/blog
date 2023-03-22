@@ -1,4 +1,4 @@
-package string;
+package algorithm.string;
 
 public class RabinKarp {
 
@@ -32,7 +32,7 @@ public class RabinKarp {
         int N = txt.length();
 
         if (N < M) {
-            return N; // can't match when text length is less than pattern length
+            return -1; // can't match when text length is less than pattern length
         }
 
         long txtHash = hash(txt, M);
@@ -48,7 +48,7 @@ public class RabinKarp {
             }
         }
 
-        return N; // not match
+        return -1; // not match
     }
 
     private boolean check(String txt, int i) {

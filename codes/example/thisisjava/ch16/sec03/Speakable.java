@@ -1,4 +1,4 @@
-package ch16.sec03;
+package example.thisisjava.ch16.sec03;
 
 @FunctionalInterface
 public interface Speakable {

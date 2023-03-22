@@ -1,4 +1,4 @@
-package peakfinder;
+package algorithm.peakfinder;
 
 public class PeakFinder2D {
 

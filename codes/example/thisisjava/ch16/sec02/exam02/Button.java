@@ -1,4 +1,4 @@
-package ch16.sec02.exam02;
+package example.thisisjava.ch16.sec02.exam02;
 
 public class Button {
 

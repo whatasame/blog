@@ -1,8 +1,10 @@
-package ch16.sec02.exam01;
+package example.thisisjava.ch16.sec02.exam01;
+
+import example.thisisjava.ch16.sec04.Person;
 
 public class LambdaExample {
     public static void main(String[] args) {
-        Person person = new Person();
+        example.thisisjava.ch16.sec04.Person person = new Person();
 
         person.action(() -> {
             System.out.println("출근을 합니다.");

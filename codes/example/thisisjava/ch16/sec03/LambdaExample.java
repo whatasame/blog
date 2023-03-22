@@ -1,8 +1,10 @@
-package ch16.sec03;
+package example.thisisjava.ch16.sec03;
+
+import example.thisisjava.ch16.sec04.Person;
 
 public class LambdaExample {
     public static void main(String[] args) {
-        Person person = new Person();
+        example.thisisjava.ch16.sec04.Person person = new Person();
 
         person.action1((name, job) -> {
             System.out.print(name + "이 ");

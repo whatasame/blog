@@ -1,4 +1,4 @@
-package ch16.sec02.exam01;
+package example.thisisjava.ch16.sec02.exam01;
 
 @FunctionalInterface
 public interface Workable {

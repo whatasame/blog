@@ -1,8 +1,9 @@
-.DS_Store
-n2g.py
-notion2github.sh
-config.ini
-target/
-temp/
-out/
-.idea/
+**/.DS_Store
+**/.idea
+**/*.iml
+**/.gradle
+**/build
+**/gradle
+**/gradlew
+**/gradlew.bat
+**/settings.gradle

@@ -1,4 +1,4 @@
-package com.github.whatasame.study.jackson.vo;
+package com.github.whatasame.java.jackson.vo;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

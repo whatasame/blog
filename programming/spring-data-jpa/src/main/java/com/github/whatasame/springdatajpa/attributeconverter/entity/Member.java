@@ -1,5 +1,7 @@
 package com.github.whatasame.springdatajpa.attributeconverter.entity;
 
+import com.github.whatasame.springdatajpa.attributeconverter.converter.MemberNameConverter;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,7 +16,9 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Convert(converter = MemberNameConverter.class)
     private MemberName name;
+    
     private MemberAge age;
 
     protected Member() {

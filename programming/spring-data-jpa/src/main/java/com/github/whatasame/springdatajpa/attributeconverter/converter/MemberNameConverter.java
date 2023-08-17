@@ -4,7 +4,7 @@ import com.github.whatasame.springdatajpa.attributeconverter.entity.MemberName;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
-@Converter(autoApply = true)
+@Converter
 public class MemberNameConverter implements AttributeConverter<MemberName, String> {
 
     @Override

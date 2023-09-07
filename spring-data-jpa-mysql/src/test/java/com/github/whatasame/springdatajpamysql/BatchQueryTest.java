@@ -1,7 +1,7 @@
 package com.github.whatasame.springdatajpamysql;
 
-import com.github.whatasame.springdatajpamysql.dao.MouseRepository;
-import com.github.whatasame.springdatajpamysql.entity.Mouse;
+import com.github.whatasame.springdatajpamysql.mouse.MouseRepository;
+import com.github.whatasame.springdatajpamysql.mouse.Mouse;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

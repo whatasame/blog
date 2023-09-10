@@ -4,3 +4,5 @@ include 'java'
 include 'spring-data-jpa'
 include 'spring-data-jpa-mysql'
 include 'spring-web'
+include 'spring-data-redis'
+

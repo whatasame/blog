@@ -1,5 +1,7 @@
 package com.github.whatasame.java;
 
+import static org.assertj.core.api.Assertions.assertThatCode;
+
 import com.github.whatasame.java.basic.InitializerBlock;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
@@ -15,50 +17,52 @@ class InitializerBlockTest {
 
     @Test
     @Order(1)
-    @DisplayName("클래스를 생성하지 않으면 컴파일러가 클래스를 로드하지 않기 때문에 static initializer block은 실행되지 않는다.")
+    @DisplayName("클래스를 사용하지 않으면 JVM이 클래스 로더에게 클래스 로드 요청을 보내지 않기 때문에 static initializer block은 실행되지 않는다.")
     void doesNotExecuteInitializerBlock() throws Exception {
-        // given
+        /* given */
 
-        // when
+        /* when */
 
-        // then
+        /* then */
     }
 
     @Test
     @Order(2)
-    @DisplayName("인스턴스 최초 생성 시 컴파일러가 클래스를 메모리에 로드하므로 static initializer block이 실행된다.")
+    @DisplayName("클래스 로더로 클래스를 불러오면 static initializer block이 실행된다.")
     void executeStaticInitializerBlockOnce() throws Exception {
-        // given
+        /* given */
+        final String name = "com.github.whatasame.java.basic.InitializerBlock";
 
-        // when
-        new InitializerBlock();
-
-        // then
+        /* when & then */
+        assertThatCode(() -> Class.forName(name))
+            .doesNotThrowAnyException();
     }
 
     @Test
     @DisplayName("인스턴스를 생성할 때마다 instance initializer block을 실행한다.")
     void executeInitializerBlockEach() throws Exception {
-        // given
+        /* given */
 
-        // when
+        /* when */
         new InitializerBlock();
         new InitializerBlock();
         new InitializerBlock();
 
-        // then
+        /* then */
+        // 콘솔 출력을 확인하여 instance initializer block이 3회 실행되는 것을 확인한다.
     }
 
     @Test
     @DisplayName("생성자보다 instance initializer block이 먼저 실행된다.")
     void priorityBetweenConstructorAndInitializerBlock() throws Exception {
-        // given
+        /* given */
 
-        // when
+        /* when */
         new InitializerBlock("first instance");
         new InitializerBlock("second instance");
         new InitializerBlock("third instance");
 
-        // then
+        /* then */
+        // 콘솔 출력을 확인하여 instance initializer block이 생성자보다 먼저 실행되는 것을 확인한다.
     }
 }

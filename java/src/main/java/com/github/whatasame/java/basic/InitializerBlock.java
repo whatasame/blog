@@ -16,4 +16,8 @@ public class InitializerBlock {
     public InitializerBlock(final String msg) {
         System.out.println("constructor: " + msg);
     }
+
+    public static void main(String[] args) {
+        System.out.println("main method");
+    }
 }

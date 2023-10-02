@@ -1,18 +1,14 @@
-package com.github.whatasame.springdatajpamysql;
+package com.github.whatasame.springdatajpa.mysql;
 
-import com.github.whatasame.springdatajpamysql.mouse.MouseRepository;
-import com.github.whatasame.springdatajpamysql.mouse.Mouse;
+import com.github.whatasame.springdatajpa.mouse.Mouse;
+import com.github.whatasame.springdatajpa.mouse.MouseRepository;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = Replace.NONE)
+@MySqlTest
 class BatchQueryTest {
 
     @Autowired

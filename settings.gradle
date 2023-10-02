@@ -4,7 +4,6 @@ include 'java'
 include 'kotlin'
 include 'spring-core'
 include 'spring-data-jpa'
-include 'spring-data-jpa-mysql'
 include 'spring-web'
 include 'spring-data-redis'
 

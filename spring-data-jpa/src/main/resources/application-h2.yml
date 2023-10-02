@@ -1,0 +1,7 @@
+spring:
+  config:
+    activate:
+      on-profile: h2
+
+  jpa:
+    database: h2

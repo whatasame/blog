@@ -116,4 +116,41 @@ class DistributionLockTest extends RedisBaseTest {
         /* then */
         assertThat(count.get()).isEqualTo(2L);
     }
+
+    @Test
+    @DisplayName("분산락 사용 시 데드락이 발생할 수 있다.")
+    void deadLock() throws Exception {
+        /* given */
+        final RLock lock1 = redissonClient.getLock("LOCK_1");
+        final RLock lock2 = redissonClient.getLock("LOCK_2");
+        final AtomicLong count = new AtomicLong(0L);
+
+        /* when */
+        final ExecutorService executorService = Executors.newCachedThreadPool();
+        executorService.execute(() -> {
+            lock1.lock();
+
+            lock2.lock();
+
+            count.incrementAndGet();
+            lock1.unlock();
+            lock2.unlock();
+        });
+        executorService.execute(() -> {
+            lock2.lock();
+
+            lock1.lock();
+
+            count.incrementAndGet();
+
+            lock1.unlock();
+            lock2.unlock();
+        });
+
+
+        /* then */
+        executorService.shutdown();
+        executorService.awaitTermination(3, TimeUnit.SECONDS);
+        assertThat(count.get()).isZero();
+    }
 }

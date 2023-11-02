@@ -1,39 +1,26 @@
 # TIL
 
-배운 내용을 정리하고 직접 구현하며 학습한다.
+The best way to learn is to program by hand.
 
 ## How to do
 
-최대한 하나의 학습 테스트와 하나의 글이 쌍을 이루도록 작성한다.
+Implement what I've learned in the following directories.
 
-하나의 주제에 불필요하게 시간을 쏟지 않는다. 빠른 호흡으로 짧은 내용을 자주 작성하는 것이 주 목적이다.
+- labs: Projects for cloning, tutorials, etc.
+- languages: Learn the syntax of programming language or its features.
+- mysql: SQL script for MySQL.
+- spring: Sample code including tests for the Spring framework.
 
-내용이 길어질 경우 최대한 나누어 작성한 후 종합하여 [블로그](https://whatasame.tistory.com/)에 작성한다.
+## Rules
 
-### programming
-
-배운 내용을 직접 구현하여 학습 테스트로 검증한다. 코드 작성 시 다음 규칙을 지켜야한다.
-
-* 최상위 directory는 language, framework 단위로 구분한다.
-* 하나의 package는 반드시 하나의 주제만 다루어야한다.
-* 하위 package는 독립된 애플리케이션으로 동작해야한다.
-* 학습 테스트는 언제 어디서든 실행할 수 있어야하며 항상 정상적으로 통과해야한다.
-* 학습 테스트는 직관적으로 이해 할 수 있도록 작성한다.
-
-### stub
-
-배운 내용을 글로 작성하여 정리한다. 글 작성 시 다음 규칙을 지켜야한다.
-
-* 최상위 directory 이름은 하위에 속한 글의 성격을 잘 나타내야한다.
-* 하나의 글은 반드시 하나의 주제만 다루어야한다.
-* 모든 글은 해라체로 작성한다.
-* 모든 글에는 하나 이상의 참고 자료가 있어야한다. 이미지를 사용한 경우 해당 이미지의 출처를 작성한다.
-* 참고 자료는 믿을만한 출처에서 가져와야한다. 그렇지 않을 경우 직접 검증 후 기입한다.
+- Test code should run anywhere, anytime.
+- Make writing test code as easy to understand as possible.
 
 ## Commit convention
 
-commit message는 `tag: message`의 형식을 갖는다. 사용할 수 있는 `tag`는 다음과 같다.
+Commit message must be consist of a `tag: message`. Possible tag are...
 
-* test: 학습 테스트 작성
-* docs: 글 작성
-* repo: repository 관리
+- repo: Manages the entire repository.
+- build: Modify dependencies.
+- test: Tasks related to testing.
+- docs: Deal with any documentations.

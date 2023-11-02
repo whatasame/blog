@@ -1,4 +1,4 @@
-rootProject.name = 'TIL'
+rootProject.name = 'spring'
 
 include 'java'
 include 'kotlin'

@@ -3,6 +3,7 @@ package com.github.whatasame.java;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 
+import com.github.whatasame.java.stream.vo.Student;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.DisplayName;
@@ -19,8 +20,8 @@ class StreamTest {
 
         /* when */
         final List<String> mapped = 오늘먹은것.stream()
-            .map(food -> food = food + " 먹었음")
-            .toList();
+                .map(food -> food = food + " 먹었음")
+                .toList();
 
         /* then */
         assertThat(오늘먹은것).hasSameElementsAs(mapped);
@@ -34,14 +35,14 @@ class StreamTest {
 
         /* when */
         nums.stream()
-            .filter(num -> {
-                System.out.println("filter target = " + num);
-                return num % 2 == 0;
-            })
-            .map(num -> {
-                System.out.println("map target = " + num);
-                return num * 2;
-            });
+                .filter(num -> {
+                    System.out.println("filter target = " + num);
+                    return num % 2 == 0;
+                })
+                .map(num -> {
+                    System.out.println("map target = " + num);
+                    return num * 2;
+                });
 
         /* then */
         // 아무것도 출력되지 않는다.
@@ -56,8 +57,8 @@ class StreamTest {
 
         /* when & then */
         assertThatCode(() -> stream.count())
-            .isExactlyInstanceOf(IllegalStateException.class)
-            .hasMessage("stream has already been operated upon or closed");
+                .isExactlyInstanceOf(IllegalStateException.class)
+                .hasMessage("stream has already been operated upon or closed");
     }
 
     @Test
@@ -65,17 +66,17 @@ class StreamTest {
     void readabilityWithNamingArgument() throws Exception {
         /* given */
         final List<Student> students = List.of(
-            new Student("kim", 100, 30, 60),
-            new Student("lee", 40, 90, 90),
-            new Student("park", 10, 80, 50)
+                new Student("kim", 100, 30, 60),
+                new Student("lee", 40, 90, 90),
+                new Student("park", 10, 80, 50)
         );
 
         /* when */
         final Double maxGrade = students.stream()
-            .map(student -> Math.max(student.getKorean(),
-                Math.max(student.getMath(), student.getEnglish())))
-            .reduce((bef, next) -> bef > next ? bef : next)
-            .orElseThrow();
+                .map(student -> Math.max(student.korean(),
+                        Math.max(student.math(), student.english())))
+                .reduce((bef, next) -> bef > next ? bef : next)
+                .orElseThrow();
 
         /* then */
         assertThat(maxGrade).isEqualTo(100);
@@ -87,16 +88,16 @@ class StreamTest {
     void readabilityWithHelperMethod() throws Exception {
         /* given */
         final List<Student> students = List.of(
-            new Student("kim", 100, 30, 60),
-            new Student("lee", 40, 90, 90),
-            new Student("park", 10, 80, 50)
+                new Student("kim", 100, 30, 60),
+                new Student("lee", 40, 90, 90),
+                new Student("park", 10, 80, 50)
         );
 
         /* when */
         final Double maxGrade = students.stream()
-            .map(Student::maxGrade)
-            .reduce((bef, next) -> bef > next ? bef : next)
-            .orElseThrow();
+                .map(Student::maxGrade)
+                .reduce((bef, next) -> bef > next ? bef : next)
+                .orElseThrow();
 
         /* then */
         assertThat(maxGrade).isEqualTo(100);

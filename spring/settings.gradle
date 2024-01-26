@@ -1,9 +1,0 @@
-rootProject.name = 'spring'
-
-include 'java'
-include 'kotlin'
-include 'spring-core'
-include 'spring-data-jpa'
-include 'spring-web'
-include 'spring-websocket'
-include 'spring-data-redis'

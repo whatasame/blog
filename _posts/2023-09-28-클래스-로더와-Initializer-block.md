@@ -12,7 +12,7 @@ tags: []
 
 이 글은 Java 17을 기준으로 작성하였습니다. 참고 자료는 다음과 같습니다.
 
-- [Class Loaders in Java | Baeldung](https://www.baeldung.com/java-classloaders)
+- [Class Loaders in Java - Baeldung](https://www.baeldung.com/java-classloaders)
 - [ClassLoader in Java - GeeksforGeeks](https://www.geeksforgeeks.org/classloader-in-java/)
 - [Initializing Fields - Oracle The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/java/javaOO/initial.html)
 - [Static vs. Instance Initializer Block in Java - Baeldung](https://www.baeldung.com/java-static-instance-initializer-blocks)

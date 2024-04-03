@@ -12,8 +12,8 @@ tags: []
 
 이 글은 Hibernate 6, Java 17을 기준으로 작성하였습니다.
 
-- [11.8. Batch fetching | Hibernate ORM User Guide](https://docs.jboss.org/hibernate/orm/6.3/userguide/html_single/Hibernate_User_Guide.html#fetching-batch)
-- [20.1.5. Using batch fetching | Hibernate Community Documentation](https://docs.jboss.org/hibernate/orm/4.2/manual/en-US/html/ch20.html#performance-fetching-batch)
+- [11.8. Batch fetching - Hibernate ORM User Guide](https://docs.jboss.org/hibernate/orm/6.3/userguide/html_single/Hibernate_User_Guide.html#fetching-batch)
+- [20.1.5. Using batch fetching - Hibernate Community Documentation](https://docs.jboss.org/hibernate/orm/4.2/manual/en-US/html/ch20.html#performance-fetching-batch)
 
 ## @BatchSize란?
 

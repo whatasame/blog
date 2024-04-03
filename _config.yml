@@ -289,7 +289,7 @@ defaults:
       # read_time: true
       comments: true
       # share: true
-      # related: true
+      related: true
       show_date: true
       toc: true
       toc_label: "Table of Contents"

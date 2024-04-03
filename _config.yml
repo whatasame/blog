@@ -140,7 +140,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/whatasame"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -289,8 +289,12 @@ defaults:
       # read_time: true
       comments: true
       # share: true
-      related: true
+      # related: true
       show_date: true
+      toc: true
+      toc_label: "Table of Contents"
+      toc_icon: "list"
+      toc_sticky: true
 
   # _pages
   - scope:

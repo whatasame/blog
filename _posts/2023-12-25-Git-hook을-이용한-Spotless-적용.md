@@ -1,14 +1,10 @@
 ---
-layout: post
 title: |
     Git hook을 이용한 Spotless 적용
 date: 2023-12-25T19:26:00.000Z
 categories: [Automation, Git, Gradle]
 tags: [Formatting]
 ---
-
-
-## 시작하며
 
 
 팀 프로젝트를 진행할 때 사소하지만 가장 신경쓰이는 것은 코드 포매팅이라고 생각합니다. 각자 사용하는 IDE가 다를 수도 있고, 같은 IDE를 사용하더라도 개인마다 설정이 달라 통일하기란 여간 쉬운일이 아니죠. 통일되지 않은 코드 형식은 PR에 불필요한 변경 사항을 남겨 코드 리뷰를 어렵게 만듭니다.

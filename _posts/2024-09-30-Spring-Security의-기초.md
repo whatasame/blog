@@ -1,13 +1,10 @@
 ---
 title: |
-    Spring Security 
+    Spring Security의 기초
 date: 2024-09-30T08:39:00.000Z
 categories: [Spring]
 tags: [Spring Security]
 ---
-
-
-## 들어가며
 
 
 사이드 프로젝트를 개발할 때마다 서버 개발자들에게 가장 귀찮은 것은 인증 및 인가 구현이라고 생각합니다. 요구 사항에 따라 달라지는 도메인 영역과 달리 인증 및 인가는 대부분 동일하기 때문에 항상 반복되는 작업이기 때문입니다.

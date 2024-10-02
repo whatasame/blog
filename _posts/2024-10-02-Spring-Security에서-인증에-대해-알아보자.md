@@ -136,10 +136,10 @@ RememberMeServices는 인증과 관련된 이벤트에 대해 알림을 제공�
 
 이번 글에서는 Spring Security에서 인증 절차에 대해 알아보았습니다. 글의 내용을 요약하면 다음과 같습니다.
 
-- Spring Security는 계층적 구조로 인증 정보를 관리하며 그 요소에는 SecurityContextHolder, SecurityContext, Authentication이 있습니다.
-- 인증은 AuthenticationManager에 의해 수행되며 기본 구현체는 ProviderManager입니다.
-- ProviderManager는 보유한 여러 AuthenticationProvider로 인증을 처리합니다.
-- AuthenticationProvider는 각자 처리할 수 있는 Authentication이 정해져있습니다.
-- AbstractAuthenticationProcessingFilter는 HTTP 기반 인증 요청을 처리하는 필터입니다.
-- 인증 성공 시 SecurityContextHolder에 Authentication이 저장되고, 실패 시 보안 조치가 취해집니다.
-- RememberMeServices는 세션 간 로그인 상태를 유지하는 기능을 제공합니다.
+- Spring Security는 계층적 구조로 인증 정보를 관리하며 SecurityContextHolder, SecurityContext, Authentication로 구성한다.
+- 인증은 AuthenticationManager에 의해 수행되며 기본 구현체는 ProviderManager이다.
+- ProviderManager는 보유한 여러 AuthenticationProvider로 인증을 처리한다.
+- AuthenticationProvider는 각자 처리할 수 있는 Authentication이 정해져있다.
+- AbstractAuthenticationProcessingFilter는 HTTP 기반 인증 요청을 처리하는 필터이다.
+- 인증 성공 시 SecurityContextHolder에 Authentication이 저장되고, 실패 시 보안 조치가 취해진다.
+- RememberMeServices는 세션 간 로그인 상태를 유지하는 기능을 제공한다.

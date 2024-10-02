@@ -1,6 +1,6 @@
 ---
 title: |
-    Spring Security의 기초
+    Spring Security를 이해하기 위해 반드시 알아야할 것들
 date: 2024-09-30T08:39:00.000Z
 categories: [Spring]
 tags: [Spring Security]

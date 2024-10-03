@@ -10,6 +10,7 @@ tags: [Spring Security]
 지난 글에서는 Spring Security의 핵심 동작 원리에 대해 알아보며 전체적인 큰 그림을 이해하였습니다. 이번 글에서는 Spring Security에서 인증을 수행하는 방법에 대해 알아보겠습니다. 참고 자료는 다음과 같습니다.
 
 - [Servlet Authentication Architecture :: Spring Security](https://docs.spring.io/spring-security/reference/servlet/authentication/architecture.html)
+- [Remember-Me Authentication :: Spring Security](https://docs.spring.io/spring-security/reference/servlet/authentication/rememberme.html)
 
 ## Spring Security의 계층 구조
 

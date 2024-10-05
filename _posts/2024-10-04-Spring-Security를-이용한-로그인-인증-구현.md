@@ -1,7 +1,7 @@
 ---
 title: |
-    Spring Security를 이용한 JWT 기반 로그인 인증 구현
-date: 2024-10-03T13:24:00.000Z
+    Spring Security를 이용한 로그인 인증 구현
+date: 2024-10-04T03:45:00.000Z
 categories: [Spring]
 tags: [Spring Security]
 ---
